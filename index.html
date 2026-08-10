@@ -1,1 +1,402 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fulfilled Dream Role Play</title>
 
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #080808;
+    color: white;
+}
+
+header {
+    padding: 25px 15px;
+    text-align: center;
+    background: linear-gradient(135deg, #111, #1b1608);
+    border-bottom: 2px solid #d4af37;
+}
+
+header h1 {
+    margin: 0;
+    color: #d4af37;
+    font-size: 36px;
+}
+
+header p {
+    color: #aaa;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+    background: #111;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+}
+
+nav a:hover {
+    background: #d4af37;
+    color: black;
+}
+
+.hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    background:
+        linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.9)),
+        radial-gradient(circle at center, #4a3a15, #080808 70%);
+}
+
+.hero h2 {
+    font-size: 50px;
+    margin: 10px 0;
+}
+
+.hero h2 span {
+    color: #d4af37;
+}
+
+.hero p {
+    color: #bbb;
+    font-size: 18px;
+}
+
+.buttons {
+    margin-top: 25px;
+}
+
+.button {
+    display: inline-block;
+    margin: 7px;
+    padding: 14px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    background: #d4af37;
+    color: #080808;
+}
+
+.button:hover {
+    background: #f0d675;
+}
+
+.button.dark {
+    background: #1d1d1d;
+    color: white;
+    border: 1px solid #444;
+}
+
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+section {
+    padding: 60px 0;
+}
+
+.title {
+    text-align: center;
+    color: #d4af37;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.status {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.box {
+    background: #121212;
+    border: 1px solid #292929;
+    border-radius: 14px;
+    padding: 25px;
+    text-align: center;
+}
+
+.box h3 {
+    margin-top: 0;
+    color: #aaa;
+}
+
+.online {
+    color: #45e889;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.number {
+    color: #d4af37;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #121212;
+    border: 1px solid #292929;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.card .icon {
+    font-size: 40px;
+}
+
+.card h3 {
+    color: #d4af37;
+}
+
+.card p {
+    color: #aaa;
+    line-height: 1.7;
+}
+
+.social {
+    text-align: center;
+    background: #0d0d0d;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #050505;
+    border-top: 1px solid #222;
+    color: #777;
+}
+
+@media (max-width: 800px) {
+    .status {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h2 {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 500px) {
+    .status {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .button {
+        display: block;
+        margin: 10px 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>FULFILLED DREAM ROLE PLAY</h1>
+    <p>ქართული SA:MP RolePlay სერვერი</p>
+</header>
+
+<nav>
+    <a href="#home">მთავარი</a>
+    <a href="#server">სერვერი</a>
+    <a href="#about">ჩვენ შესახებ</a>
+    <a href="#community">Community</a>
+</nav>
+
+<section class="hero" id="home">
+    <div>
+        <h2>შექმენი შენი <span>ისტორია.</span></h2>
+        <p>შემოუერთდი Fulfilled Dream Role Play-ს</p>
+
+        <div class="buttons">
+            <a class="button" href="samp://94.23.168.153:2150">
+                🎮 თამაშის დაწყება
+            </a>
+
+            <a class="button dark" href="#launcher">
+                📥 Launcher
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="server">
+    <div class="container">
+
+        <h2 class="title">სერვერის სტატუსი</h2>
+
+        <div class="status">
+
+            <div class="box">
+                <h3>სტატუსი</h3>
+                <div class="online">● ONLINE</div>
+            </div>
+
+            <div class="box">
+                <h3>მოთამაშეები</h3>
+                <div class="number">2 / 50</div>
+            </div>
+
+            <div class="box">
+                <h3>Game Mode</h3>
+                <div class="number">FD:RP</div>
+            </div>
+
+            <div class="box">
+                <h3>Server IP</h3>
+                <div class="number">94.23.168.153:2150</div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+
+        <h2 class="title">რატომ FD:RP?</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">🏙️</div>
+                <h3>ცოცხალი ქალაქი</h3>
+                <p>
+                    შექმენი შენი პერსონაჟი, იმუშავე,
+                    შეიძინე მანქანა და ააშენე საკუთარი ისტორია.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">⚔️</div>
+                <h3>ფრაქციები</h3>
+                <p>
+                    შეუერთდი სხვადასხვა ორგანიზაციას
+                    და გახდი ქალაქის მნიშვნელოვანი ნაწილი.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">👥</div>
+                <h3>ქართული Community</h3>
+                <p>
+                    ითამაშე ქართველ მოთამაშეებთან
+                    და გაიცანი ახალი ადამიანები.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="social" id="community">
+
+    <div class="container">
+
+        <h2 class="title">შემოგვიერთდი</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">💬</div>
+                <h3>Discord</h3>
+
+                <p>
+                    მიიღე სიახლეები და ესაუბრე
+                    ჩვენს Community-ს.
+                </p>
+
+                <a
+                    class="button"
+                    href="https://discord.gg/eYUV46ysT"
+                    target="_blank">
+                    Discord-ზე შესვლა
+                </a>
+            </div>
+
+            <div class="card">
+                <div class="icon">▶️</div>
+                <h3>YouTube</h3>
+
+                <p>
+                    ნახე ჩვენი ვიდეოები და
+                    FD:RP-ის ახალი კონტენტი.
+                </p>
+
+                <a
+                    class="button"
+                    href="https://www.youtube.com/@FulfilledDreamRolePlay"
+                    target="_blank">
+                    YouTube არხი
+                </a>
+            </div>
+
+            <div class="card" id="launcher">
+                <div class="icon">📥</div>
+                <h3>Launcher</h3>
+
+                <p>
+                    ჩვენი Launcher მალე იქნება
+                    ხელმისაწვდომი.
+                </p>
+
+                <a class="button dark" href="#">
+                    მალე იქნება
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Fulfilled Dream Role Play</p>
+    <p>FD:RP • Georgia</p>
+</footer>
+
+</body>
+  </html>

@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Fulfilled Dream Role Play</title>
+
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#070707;
+color:#fff;
+}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit}
+
+:root{
+--gold:#d9aa35;
+--gold2:#ffd866;
+--dark:#080808;
+--panel:#111;
+--border:#303030;
+--green:#39df76;
+--red:#ff5555;
+--gray:#999;
+}
+
+body:before{
+content:"";
+position:fixed;
+inset:0;
+z-index:-2;
+background:
+linear-gradient(rgba(0,0,0,.78),rgba(0,0,0,.94)),
+url("https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=2200&q=85");
+background-size:cover;
+background-position:center;
+}
+
+nav{
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(5,5,5,.96);
+border-bottom:2px solid var(--gold);
+}
+
+.nav{
+max-width:1250px;
+margin:auto;
+padding:15px 20px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:15px;
+}
+
+.logo{
+font-size:20px;
+font-weight:900;
+white-space:nowrap;
+}
+
+.logo span{color:var(--gold)}
+
+.links{
+display:flex;
+gap:5px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.links a{
+padding:10px 12px;
+font-size:13px;
+font-weight:bold;
+color:#aaa;
+border-radius:6px;
+}
+
+.links a:hover{
+background:var(--gold);
+color:#000;
+}
+
+.play{
+background:var(--gold);
+color:#000!important;
+}
+
+.admin-link{
+color:var(--gold)!important;
+}
+
+.hero{
+min-height:680px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:50px 20px;
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.hero small{
+color:var(--gold);
+letter-spacing:4px;
+font-weight:bold;
+}
+
+.hero h1{
+font-size:70px;
+line-height:1;
+margin:20px 0;
+text-shadow:0 8px 35px #000;
+}
+
+.hero h1 span{color:var(--gold)}
+
+.hero p{
+color:#bbb;
+font-size:18px;
+line-height:1.7;
+}
+
+.buttons{
+display:flex;
+justify-content:center;
+gap:12px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.btn{
+border:0;
+border-radius:7px;
+padding:14px 22px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.gold{
+background:var(--gold);
+color:#000;
+}
+
+.gold:hover{background:var(--gold2)}
+
+.dark{
+background:#171717;
+color:#fff;
+border:1px solid #444;
+}
+
+.stats{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:10px;
+margin-top:40px;
+}
+
+.stat{
+background:rgba(10,10,10,.9);
+border:1px solid #333;
+padding:14px 18px;
+border-radius:7px;
+color:#aaa;
+}
+
+.stat b{color:#fff}
+.online{color:var(--green)!important}
+
+section{padding:80px 0}
+
+.container{
+width:92%;
+max-width:1200px;
+margin:auto;
+}
+
+.title{
+text-align:center;
+margin-bottom:40px;
+}
+
+.title small{
+color:var(--gold);
+font-weight:bold;
+letter-spacing:3px;
+}
+
+.title h2{
+font-size:38px;
+margin:10px 0;
+}
+
+.title p{
+color:#999;
+line-height:1.7;
+}
+
+.server{
+background:rgba(5,5,5,.9);
+border-top:1px solid #222;
+border-bottom:1px solid #222;
+}
+
+.server-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+}
+
+.box{
+background:#111;
+border:1px solid #303030;
+border-radius:9px;
+padding:25px;
+text-align:center;
+}
+
+.box small{color:#777}
+.box strong{
+display:block;
+margin-top:10px;
+font-size:23px;
+color:var(--gold);
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.feature{
+background:rgba(15,15,15,.94);
+border:1px solid #303030;
+border-radius:10px;
+padding:30px;
+}
+
+.icon{font-size:42px}
+
+.feature h3{color:var(--gold)}
+.feature p{
+color:#999;
+line-height:1.7;
+}
+
+.shop{
+background:rgba(5,5,5,.92);
+}
+
+.categories{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:8px;
+margin-bottom:30px;
+}
+
+.cat{
+background:#151515;
+border:1px solid #383838;
+color:#aaa;
+padding:10px 16px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.cat.active,
+.cat:hover{
+background:var(--gold);
+color:#000;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:16px;
+}
+
+.product{
+background:#111;
+border:1px solid #333;
+border-radius:10px;
+overflow:hidden;
+}
+
+.product:hover{
+border-color:var(--gold);
+}
+
+.product-img{
+height:145px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:60px;
+background:radial-gradient(circle,#493c19,#111 70%);
+}
+
+.product-body{
+padding:20px;
+}
+
+.product-body small{color:#777}
+
+.product-body h3{
+margin:8px 0;
+}
+
+.product-body p{
+color:#888;
+font-size:13px;
+min-height:38px;
+}
+
+.product-bottom{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:10px;
+}
+
+.price{
+font-size:21px;
+font-weight:bold;
+color:var(--gold);
+}
+
+.community{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+.community-card{
+background:#111;
+border:1px solid #333;
+border-radius:10px;
+padding:35px;
+}
+
+.community-card p{
+color:#999;
+line-height:1.7;
+}
+
+/* ADMIN */
+
+.admin{
+display:none;
+background:#050505;
+border-top:2px solid var(--gold);
+min-height:700px;
+}
+
+.login{
+max-width:430px;
+margin:auto;
+background:#111;
+border:1px solid #333;
+border-radius:10px;
+padding:30px;
+}
+
+.login h2{color:var(--gold)}
+
+.input{
+width:100%;
+padding:14px;
+background:#080808;
+border:1px solid #3b3b3b;
+border-radius:6px;
+color:#fff;
+margin:8px 0 15px;
+outline:none;
+}
+
+.input:focus{border-color:var(--gold)}
+
+.error{
+color:var(--red);
+margin-top:12px;
+font-size:13px;
+}
+
+.dashboard{
+display:none;
+}
+
+.finance-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+margin-bottom:30px;
+}
+
+.finance-card{
+background:#111;
+border:1px solid #333;
+border-radius:9px;
+padding:25px;
+}
+
+.finance-card small{color:#777}
+
+.finance-card strong{
+display:block;
+font-size:28px;
+color:var(--gold);
+margin-top:10px;
+}
+
+.history{
+background:#111;
+border:1px solid #333;
+border-radius:10px;
+overflow:auto;
+}
+
+.history-head{
+padding:20px;
+border-bottom:1px solid #333;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:10px;
+}
+
+.history-head h3{margin:0}
+
+table{
+width:100%;
+border-collapse:collapse;
+min-width:700px;
+}
+
+th,td{
+padding:15px;
+border-bottom:1px solid #252525;
+text-align:left;
+}
+
+th{
+color:var(--gold);
+font-size:13px;
+}
+
+td{
+color:#ccc;
+font-size:13px;
+}
+
+.paid{color:var(--green)!important}
+.pending{color:#ffd866!important}
+
+.empty{
+padding:40px;
+text-align:center;
+color:#666;
+}
+
+.admin-actions{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+}
+
+footer{
+background:#030303;
+border-top:1px solid #252525;
+text-align:center;
+padding:45px 20px;
+}
+
+footer h3{margin:0}
+footer span{color:var(--gold)}
+footer p{color:#666}
+
+/* MODAL */
+
+.modal{
+display:none;
+position:fixed;
+inset:0;
+z-index:5000;
+background:rgba(0,0,0,.88);
+align-items:center;
+justify-content:center;
+padding:20px;
+}
+
+.modal.show{display:flex}
+
+.modal-box{
+width:100%;
+max-width:480px;
+background:#111;
+border:1px solid #444;
+border-top:3px solid var(--gold);
+border-radius:10px;
+padding:28px;
+}
+
+.modal-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.modal-header h2{color:var(--gold)}
+
+.close{
+border:0;
+background:#222;
+color:#fff;
+padding:9px 12px;
+border-radius:5px;
+cursor:pointer;
+}
+
+.notice{
+background:#181818;
+border:1px solid #333;
+border-radius:7px;
+padding:15px;
+color:#999;
+line-height:1.7;
+margin:12px 0;
+}
+
+.success{
+display:none;
+color:var(--green);
+background:#102117;
+border:1px solid #245b37;
+padding:14px;
+border-radius:7px;
+margin-top:15px;
+}
+
+/* MOBILE */
+
+@media(max-width:950px){
+.server-grid,
+.finance-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.products{
+grid-template-columns:repeat(2,1fr);
+}
+
+.features{
+grid-template-columns:1fr 1fr;
+}
+}
+
+@media(max-width:650px){
+.nav{
+flex-direction:column;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.server-grid,
+.finance-grid,
+.products,
+.features,
+.community{
+grid-template-columns:1fr;
+}
+
+.links a{
+font-size:11px;
+padding:8px;
+}
+
+.hero{
+min-height:600px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="nav">
+
+<a href="#home" class="logo">
+FULFILLED <span>DREAM RP</span>
+</a>
+
+<div class="links">
+<a href="#home">მთავარი</a>
+<a href="#server">სერვერი</a>
+<a href="#features">პროექტი</a>
+<a href="#shop">🛒 მაღაზია</a>
+<a href="#community">Community</a>
+<a href="#admin" class="admin-link">🔐 Admin</a>
+<a href="samp://94.23.168.153:2150" class="play">🎮 თამაში</a>
+</div>
+
+</div>
+</nav>
+
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<small>GEORGIA • SAN ANDREAS • ROLE PLAY</small>
+
+<h1>
+FULFILLED<br>
+<span>DREAM</span> ROLE PLAY
+</h1>
+
+<p>
+შექმენი შენი პერსონაჟი, აირჩიე საკუთარი გზა
+და დაწერე შენი ისტორია Fulfilled Dream Role Play-ში.
+</p>
+
+<div class="buttons">
+
+<a href="samp://94.23.168.153:2150" class="btn gold">
+🎮 თამაშის დაწყება
+</a>
+
+<a href="#shop" class="btn dark">
+💎 Donate Shop
+</a>
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+სტატუსი:
+<b class="online">● ONLINE</b>
+</div>
+
+<div class="stat">
+მოთამაშეები:
+<b>3 / 50</b>
+</div>
+
+<div class="stat">
+IP:
+<b>94.23.168.153:2150</b>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="server" id="server">
+
+<div class="container">
+
+<div class="title">
+<small>SERVER INFORMATION</small>
+<h2>სერვერის ინფორმაცია</h2>
+</div>
+
+<div class="server-grid">
+
+<div class="box">
+<small>STATUS</small>
+<strong class="online">● ONLINE</strong>
+</div>
+
+<div class="box">
+<small>PLAYERS</small>
+<strong>3 / 50</strong>
+</div>
+
+<div class="box">
+<small>GAME MODE</small>
+<strong>FD:RP</strong>
+</div>
+
+<div class="box">
+<small>SERVER IP</small>
+<strong style="font-size:16px">
+94.23.168.153:2150
+</strong>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="features">
+
+<div class="container">
+
+<div class="title">
+<small>FULFILLED DREAM</small>
+<h2>რატომ FD:RP?</h2>
+<p>
+ქართული RolePlay პროექტი საკუთარი ისტორიით,
+ორგანიზაციებითა და Community-თი.
+</p>
+</div>
+
+<div class="features">
+
+<div class="feature">
+<div class="icon">🏙️</div>
+<h3>ცოცხალი ქალაქი</h3>
+<p>
+იმუშავე, იყიდე სახლი, მანქანა და შექმენი
+საკუთარი ისტორია.
+</p>
+</div>
+
+<div class="feature">
+<div class="icon">🚔</div>
+<h3>ფრაქციები</h3>
+<p>
+შეუერთდი პოლიციას, სამთავრობო ან სხვა
+ორგანიზაციებს.
+</p>
+</div>
+
+<div class="feature">
+<div class="icon">🔫</div>
+<h3>კრიმინალური სამყარო</h3>
+<p>
+მაფიები, ბანდები და კრიმინალური
+ორგანიზაციები.
+</p>
+</div>
+
+<div class="feature">
+<div class="icon">🚘</div>
+<h3>მანქანები</h3>
+<p>
+შეიძინე და განავითარე შენი ავტომობილი.
+</p>
+</div>
+
+<div class="feature">
+<div class="icon">💼</div>
+<h3>სამუშაოები</h3>
+<p>
+იმუშავე, გამოიმუშავე ფული და განავითარე
+შენი პერსონაჟი.
+</p>
+</div>
+
+<div class="feature">
+<div class="icon">🎙️</div>
+<h3>RolePlay</h3>
+<p>
+შექმენი რეალური ისტორია სხვა მოთამაშეებთან.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="shop" id="shop">
+
+<div class="container">
+
+<div class="title">
+<small>DONATE SHOP</small>
+<h2>FULFILLED DREAM SHOP</h2>
+<p>
+აირჩიე პროდუქტი და შეიყვანე შენი SA:MP Nickname.
+</p>
+</div>
+
+<div class="categories">
+
+<button class="cat active" onclick="filterProducts('all',this)">
+ყველა
+</button>
+
+<button class="cat" onclick="filterProducts('coin',this)">
+💎 G-Coin
+</button>
+
+<button class="cat" onclick="filterProducts('pack',this)">
+🎁 პაკები
+</button>
+
+<button class="cat" onclick="filterProducts('skin',this)">
+👕 სკინები
+</button>
+
+<button class="cat" onclick="filterProducts('car',this)">
+🚘 მანქანები
+</button>
+
+</div>
+
+
+<div class="products">
+
+<div class="product" data-type="coin">
+<div class="product-img">💎</div>
+<div class="product-body">
+<small>G-COIN</small>
+<h3>100 G-Coin</h3>
+<p>100 G-Coin.</p>
+<div class="product-bottom">
+<div class="price">₾3</div>
+<button class="btn gold"
+onclick="openBuy('100 G-Coin',100,3)">
+ყიდვა
+</button>
+</div>
+</div>
+</div>
+
+
+<div class="product" data-type="coin">
+<div class="product-img">💎</div>
+<div class="product-body">
+<small>G-COIN</small>
+<h3>500 G-Coin</h3>
+<p>500 G-Coin.</p>
+<div class="product-bottom">
+<div class="price">₾15</div>
+<button class="btn gold"
+onclick="openBuy('500 G-Coin',500,15)">
+ყიდვა
+</button>
+</div>
+</div>
+</div>
+
+
+<div class="product" data-type="coin">
+<div class="product-img">💎</div>
+<div class="product-body">
+<small>G-COIN</small>
+<h3>1000 G-Coin</h3>
+<p>1000 G-Coin.</p>
+<div class="product-bottom">
+<div class="price">₾30</div>
+<button class="btn gold"
+onclick="openBuy('1000 G-Coin',1000,30)">
+ყიდვა
+</button>
+</div>
+</div>
+</div>
+
+
+<div class="product" data-type="coin">
+<div class="product-img">💎</div>
+<div class="product-body">
+<small>G-COIN</small>
+<h3>2500 G-Coin</h3>
+<p>2500 G-Coin.</p>
+<div class="product-bottom">
+<div class="price">₾60</div>
+<button class="btn gold"
+onclick="openBuy('2500 G-Coin',2500,60)">
+ყიდვა
+</button>
+</div>
+</div>
+</div>
+
+
+<div class="product" data-type="pack">
+<div class="product-img">🎁</div>
+<div class="product-body">
+<small>PACK</small>
+<h3>Starter Pack</h3>
+<p>საწყისი პაკეტი.</p>
+<div class="product-bottom">
+<div class="price">₾15</div>
+<button class="btn gold"
+onclick="openBuy('Starter Pack',500,15)">
+ყიდვა
+</button>
+</div>
+</div>
+</div>
+
+
+<div class="product" data-type="pack">
+<div class="product-img">👑</div>
+<div class="product-body">
+<small>PACK</small>
+<h3>VIP Pack</h3>
+<p>VIP პაკეტი.</p>
+<div class="product-bottom">
+<div class="price">₾45</div>
+<button class="btn gold"
+onclick="openBuy('VIP Pack',1500,45)">
+ყიდვა
+</button>
+</div>
+</div>
+</div>
+
+
+<div class="product" data-type="skin">
+<div class="product-img">👕</div>
+<div class="product-body">
+<small>SKIN</small>
+<h3>Exclusive Skin</h3>
+<p>ექსკლუზიური Skin.</p>
+<div class="product-bottom">
+<div class="price">₾15</div>
+<button class="btn gold"
+onclick="openBuy('Exclusive Skin',0,15)">
+ყიდვა
+</button>
+</div>
+</div>
+</div>
+
+
+<div class="product" data-type="car">
+<div class="product-img">🚘</div>
+<div class="product-body">
+<small>VEHICLE</small>
+<h3>Premium Car</h3>
+<p>Premium ავტომობილი.</p>
+<div class="product-bottom">
+<div class="price">₾60</div>
+<button class="btn gold"
+onclick="openBuy('Premium Car',0,60)">
+ყიდვა
+</button>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="community">
+
+<div class="container">
+
+<div class="title">
+<small>COMMUNITY</small>
+<h2>შემოგვიერთდი</h2>
+</div>
+
+<div class="community">
+
+<div class="community-card">
+<div class="icon">💬</div>
+<h2>Discord</h2>
+<p>
+შემოგვიერთდი Discord-ზე და მიიღე
+სიახლეები.
+</p>
+<a class="btn gold"
+href="https://discord.gg/eYUV46ysT"
+target="_blank">
+Discord
+</a>
+</div>
+
+<div class="community-card">
+<div class="icon">▶️</div>
+<h2>YouTube</h2>
+<p>
+ნახე ჩვენი ვიდეოები და ახალი კონტენტი.
+</p>
+<a class="btn gold"
+href="https://www.youtube.com/@FulfilledDreamRolePlay"
+target="_blank">
+YouTube
+</a>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ADMIN -->
+
+<section class="admin" id="admin">
+
+<div class="container">
+
+<div class="title">
+<small>PRIVATE CONTROL PANEL</small>
+<h2>ADMIN FINANCE</h2>
+<p>ტრანზაქციები და გაყიდვების ისტორია</p>
+</div>
+
+
+<div id="loginBox" class="login">
+
+<h2>🔐 ადმინისტრატორის შესვლა</h2>
+
+<input
+id="adminPassword"
+class="input"
+type="password"
+placeholder="Admin პაროლი">
+
+<button class="btn gold"
+onclick="loginAdmin()">
+შესვლა
+</button>
+
+<div id="loginError" class="error"></div>
+
+</div>
+
+
+<div id="dashboard" class="dashboard">
+
+<div class="finance-grid">
+
+<div class="finance-card">
+<small>საერთო შემოსავალი</small>
+<strong id="totalRevenue">₾0</strong>
+</div>
+
+<div class="finance-card">
+<small>დღეს</small>
+<strong id="todayRevenue">₾0</strong>
+</div>
+
+<div class="finance-card">
+<small>ტრანზაქციები</small>
+<strong id="transactionCount">0</strong>
+</div>
+
+<div class="finance-card">
+<small>გაყიდული G-Coin</small>
+<strong id="totalCoins">0</strong>
+</div>
+
+</div>
+
+
+<div class="history">
+
+<div class="history-head">
+
+<h3>📊 გაყიდვების ისტორია</h3>
+
+<div class="admin-actions">
+
+<button class="btn dark"
+onclick="refreshFinance()">
+🔄 განახლება
+</button>
+
+<button class="btn dark"
+onclick="clearOrders()">
+🗑️ ისტორიის წაშლა
+</button>
+
+</div>
+
+</div>
+
+<table>
+
+<thead>
+<tr>
+<th>თარიღი</th>
+<th>Nickname</th>
+<th>პროდუქტი</th>
+<th>G-Coin</th>
+<th>თანხა</th>
+<th>სტატუსი</th>
+</tr>
+</thead>
+
+<tbody id="ordersTable"></tbody>
+
+</table>
+
+<div id="emptyOrders" class="empty">
+ტრანზაქციები ჯერ არ არის.
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<h3>
+FULFILLED <span>DREAM ROLE PLAY</span>
+</h3>
+
+<p>© 2026 FD:RP • Georgia</p>
+
+</footer>
+
+
+<!-- BUY MODAL -->
+
+<div class="modal" id="buyModal">
+
+<div class="modal-box">
+
+<div class="modal-header">
+
+<h2>🛒 შეკვეთა</h2>
+
+<button class="close"
+onclick="closeBuy()">
+✕
+</button>
+
+</div>
+
+<div class="notice">
+
+პროდუქტი:
+<strong id="buyProduct"></strong>
+
+<br>
+
+G-Coin:
+<strong id="buyCoins"
+style="color:#d9aa35"></strong>
+
+<br>
+
+ფასი:
+<strong style="color:#d9aa35">
+₾<span id="buyPrice"></span>
+</strong>
+
+</div>
+
+<label>SA:MP Nickname</label>
+
+<input
+id="nickname"
+class="input"
+placeholder="მაგ: Giorgi_Giorgi">
+
+<button class="btn gold"
+style="width:100%"
+onclick="createOrder()">
+💳 გადახდაზე გადასვლა
+</button>
+
+<div id="orderSuccess" class="success"></div>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* =========================
+   DATABASE
+========================= */
+
+function getOrders(){
+
+return JSON.parse(
+localStorage.getItem("fd_orders") || "[]"
+);
+
+}
+
+function saveOrders(orders){
+
+localStorage.setItem(
+"fd_orders",
+JSON.stringify(orders)
+);
+
+}
+
+
+/* =========================
+   SHOP
+========================= */
+
+let selectedProduct="";
+let selectedCoins=0;
+let selectedPrice=0;
+
+function openBuy(product,coins,price){
+
+selectedProduct=product;
+selectedCoins=coins;
+selectedPrice=price;
+
+document.getElementById("buyProduct")
+.textContent=product;
+
+document.getElementById("buyCoins")
+.textContent=coins ? coins+" G-Coin" : "სპეციალური ნივთი";
+
+document.getElementById("buyPrice")
+.textContent=price;
+
+document.getElementById("nickname").value="";
+
+document.getElementById("orderSuccess")
+.style.display="none";
+
+document.getElementById("buyModal")
+.classList.add("show");
+
+}
+
+function closeBuy(){
+
+document.getElementById("buyModal")
+.classList.remove("show");
+
+}
+
+
+/* =========================
+   CREATE ORDER
+========================= */
+
+function createOrder(){
+
+let nickname=
+document.getElementById("nickname")
+.value.trim();
+
+if(!nickname){
+
+alert("შეიყვანე შენი SA:MP Nickname.");
+
+return;
+
+}
+
+let order={
+
+id:"FD-"+Date.now(),
+
+date:new Date().toLocaleString("ka-GE"),
+
+timestamp:Date.now(),
+
+nickname:nickname,
+
+product:selectedProduct,
+
+coins:selectedCoins,
+
+price:selectedPrice,
+
+status:"PENDING"
+
+};
+
+let orders=getOrders();
+
+orders.push(order);
+
+saveOrders(orders);
+
+
+/*
+რეალური Payment Gateway აქ მოგვიანებით
+დაემატება.
+
+ამ ეტაპზე შეკვეთა ინახება სისტემაში.
+*/
+
+let success=
+document.getElementById("orderSuccess");
+
+success.style.display="block";
+
+success.innerHTML=
+"✅ შეკვეთა შეიქმნა.<br>"+
+"შეკვეთის ID: <b>"+order.id+"</b><br>"+
+"სტატუსი: <b>PENDING</b><br><br>"+
+"რეალური ბარათით გადახდის ჩართვის შემდეგ ეს შეკვეთა გადახდის გვერდზე გადავა.";
+
+}
+
+
+/* =========================
+   FILTER
+========================= */
+
+function filterProducts(type,button){
+
+document.querySelectorAll(".cat")
+.forEach(x=>x.classList.remove("active"));
+
+button.classList.add("active");
+
+document.querySelectorAll(".product")
+.forEach(product=>{
+
+if(
+type==="all" ||
+product.dataset.type===type
+){
+
+product.style.display="block";
+
+}else{
+
+product.style.display="none";
+
+}
+
+});
+
+}
+
+
+/* =========================
+   ADMIN LOGIN
+========================= */
+
+const ADMIN_PASSWORD="FDADMIN2026";
+
+function loginAdmin(){
+
+let password=
+document.getElementById("adminPassword")
+.value;
+
+if(password===ADMIN_PASSWORD){
+
+document.getElementById("loginBox")
+.style.display="none";
+
+document.getElementById("dashboard")
+.style.display="block";
+
+refreshFinance();
+
+}else{
+
+document.getElementById("loginError")
+.textContent=
+"❌ არასწორი პაროლი.";
+
+}
+
+}
+
+
+/* =========================
+   FINANCE
+========================= */
+
+function refreshFinance(){
+
+let orders=getOrders();
+
+let total=0;
+let coins=0;
+
+let today=
+new Date().toLocaleDateString("ka-GE");
+
+let todayTotal=0;
+
+orders.forEach(order=>{
+
+if(order.status==="PAID"){
+
+total+=Number(order.price);
+coins+=Number(order.coins);
+
+let orderDate=
+new Date(order.timestamp)
+.toLocaleDateString("ka-GE");
+
+if(orderDate===today){
+
+todayTotal+=Number(order.price);
+
+}
+
+}
+
+});
+
+document.getElementById("totalRevenue")
+.textContent="₾"+total;
+
+document.getElementById("todayRevenue")
+.textContent="₾"+todayTotal;
+
+document.getElementById("transactionCount")
+.textContent=orders.length;
+
+document.getElementById("totalCoins")
+.textContent=coins;
+
+renderOrders(orders);
+
+}
+
+
+/* =========================
+   ORDERS TABLE
+========================= */
+
+function renderOrders(orders){
+
+let table=
+document.getElementById("ordersTable");
+
+let empty=
+document.getElementById("emptyOrders");
+
+table.innerHTML="";
+
+if(!orders.length){
+
+empty.style.display="block";
+
+return;
+
+}
+
+empty.style.display="none";
+
+orders
+.slice()
+.reverse()
+.forEach(order=>{
+
+let tr=document.createElement("tr");
+
+let statusClass=
+order.status==="PAID"
+?"paid":"pending";
+
+tr.innerHTML=`
+
+<td>${escapeHTML(order.date)}</td>
+
+<td>
+<b>${escapeHTML(order.nickname)}</b>
+</td>
+
+<td>${escapeHTML(order.product)}</td>
+
+<td>
+${order.coins ? order.coins+" G-Coin" : "—"}
+</td>
+
+<td>
+₾${Number(order.price)}
+</td>
+
+<td>
+<span class="${statusClass}">
+${escapeHTML(order.status)}
+</span>
+</td>
+
+`;
+
+table.appendChild(tr);
+
+});
+
+}
+
+
+/* =========================
+   CLEAR ORDERS
+========================= */
+
+function clearOrders(){
+
+if(
+!confirm(
+"ნამდვილად გინდა ყველა შეკვეთის წაშლა?"
+)
+){
+
+return;
+
+}
+
+localStorage.removeItem("fd_orders");
+
+refreshFinance();
+
+}
+
+
+/* =========================
+   SECURITY
+========================= */
+
+function escapeHTML(value){
+
+return String(value)
+.replace(/&/g,"&amp;")
+.replace(/</g,"&lt;")
+.replace(/>/g,"&gt;")
+.replace(/"/g,"&quot;")
+.replace(/'/g,"&#039;");
+
+}
+
+
+/* =========================
+   ADMIN HASH
+========================= */
+
+function openAdmin(){
+
+if(location.hash==="#admin"){
+
+document.getElementById("admin")
+.style.display="block";
+
+}
+
+}
+
+window.addEventListener(
+"load",
+openAdmin
+);
+
+window.addEventListener(
+"hashchange",
+openAdmin
+);
+
+</script>
+
+</body>
+                           </html>

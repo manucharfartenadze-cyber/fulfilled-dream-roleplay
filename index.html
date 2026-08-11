@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fulfilled Dream Role Play</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+background:#080808;
+color:#fff;
+}
+
+header{
+background:linear-gradient(135deg,#111,#211a08);
+border-bottom:2px solid #d4af37;
+padding:25px 15px;
+text-align:center;
+}
+
+header h1{
+margin:0;
+color:#d4af37;
+font-size:34px;
+}
+
+header p{
+color:#aaa;
+margin:8px 0 0;
+}
+
+nav{
+position:sticky;
+top:0;
+z-index:100;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:8px;
+padding:13px;
+background:rgba(10,10,10,.96);
+border-bottom:1px solid #252525;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+padding:10px 14px;
+border-radius:8px;
+font-weight:bold;
+}
+
+nav a:hover{
+background:#d4af37;
+color:#000;
+}
+
+.hero{
+min-height:500px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:60px 20px;
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.94)),
+radial-gradient(circle,#5a4716,#080808 70%);
+}
+
+.hero h2{
+font-size:52px;
+margin:0 0 15px;
+}
+
+.hero h2 span{
+color:#d4af37;
+}
+
+.hero p{
+font-size:19px;
+color:#bbb;
+}
+
+.buttons{
+margin-top:30px;
+}
+
+.button{
+display:inline-block;
+padding:14px 24px;
+margin:7px;
+border-radius:10px;
+background:#d4af37;
+color:#080808;
+font-weight:bold;
+text-decoration:none;
+border:none;
+cursor:pointer;
+}
+
+.button:hover{
+background:#f0d875;
+}
+
+.button.dark{
+background:#191919;
+color:#fff;
+border:1px solid #444;
+}
+
+.container{
+width:92%;
+max-width:1150px;
+margin:auto;
+}
+
+section{
+padding:65px 0;
+}
+
+.title{
+text-align:center;
+color:#d4af37;
+font-size:32px;
+margin-bottom:35px;
+}
+
+.status{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+}
+
+.box,
+.card,
+.finance-card{
+background:#121212;
+border:1px solid #292929;
+border-radius:15px;
+padding:25px;
+}
+
+.box{
+text-align:center;
+}
+
+.box h3{
+color:#aaa;
+margin-top:0;
+}
+
+.online{
+color:#45e889;
+font-size:21px;
+font-weight:bold;
+}
+
+.number{
+color:#d4af37;
+font-size:23px;
+font-weight:bold;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.card{
+text-align:center;
+}
+
+.card .icon{
+font-size:42px;
+}
+
+.card h3{
+color:#d4af37;
+}
+
+.card p{
+color:#aaa;
+line-height:1.7;
+}
+
+.shop{
+background:#0d0d0d;
+}
+
+.shop-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.product{
+background:#121212;
+border:1px solid #333;
+border-radius:16px;
+padding:30px;
+text-align:center;
+transition:.2s;
+}
+
+.product:hover{
+transform:translateY(-5px);
+border-color:#d4af37;
+}
+
+.product h3{
+color:#d4af37;
+font-size:25px;
+}
+
+.coin{
+font-size:42px;
+}
+
+.price{
+font-size:28px;
+font-weight:bold;
+margin:15px 0;
+}
+
+.product ul{
+list-style:none;
+padding:0;
+color:#aaa;
+line-height:2;
+}
+
+.product.vip{
+border:2px solid #d4af37;
+}
+
+.admin{
+background:#070707;
+display:none;
+}
+
+.login-box{
+max-width:400px;
+margin:auto;
+background:#121212;
+border:1px solid #333;
+border-radius:15px;
+padding:30px;
+text-align:center;
+}
+
+.input{
+width:100%;
+padding:13px;
+margin:8px 0;
+border-radius:8px;
+border:1px solid #333;
+background:#080808;
+color:#fff;
+outline:none;
+}
+
+.finance-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+margin-bottom:25px;
+}
+
+.finance-card h3{
+color:#999;
+margin-top:0;
+}
+
+.finance-number{
+font-size:27px;
+color:#d4af37;
+font-weight:bold;
+}
+
+.table-wrap{
+overflow-x:auto;
+background:#111;
+border-radius:12px;
+border:1px solid #292929;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+min-width:650px;
+}
+
+th,td{
+padding:14px;
+border-bottom:1px solid #292929;
+text-align:left;
+}
+
+th{
+color:#d4af37;
+background:#171717;
+}
+
+td{
+color:#ccc;
+}
+
+.success{
+color:#45e889;
+}
+
+.pending{
+color:#ffd24a;
+}
+
+.social{
+background:#0d0d0d;
+}
+
+footer{
+padding:35px 15px;
+background:#050505;
+border-top:1px solid #222;
+text-align:center;
+color:#777;
+}
+
+.notice{
+text-align:center;
+color:#777;
+font-size:14px;
+margin-top:20px;
+}
+
+@media(max-width:900px){
+
+.status,
+.finance-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.cards,
+.shop-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:600px){
+
+header h1{
+font-size:26px;
+}
+
+.hero{
+min-height:450px;
+}
+
+.hero h2{
+font-size:35px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.status,
+.finance-grid{
+grid-template-columns:1fr;
+}
+
+.button{
+display:block;
+margin:10px 0;
+}
+
+nav a{
+font-size:13px;
+padding:8px 10px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>FULFILLED DREAM ROLE PLAY</h1>
+
+<p>ქართული SA:MP RolePlay სერვერი</p>
+
+</header>
+
+
+<nav>
+
+<a href="#home">მთავარი</a>
+
+<a href="#server">სერვერი</a>
+
+<a href="#shop">🛒 Donate</a>
+
+<a href="#about">ჩვენ შესახებ</a>
+
+<a href="#community">Community</a>
+
+<a href="#admin">🔐 Admin</a>
+
+</nav>
+
+
+<section class="hero" id="home">
+
+<div>
+
+<h2>შექმენი შენი <span>ისტორია.</span></h2>
+
+<p>შემოუერთდი Fulfilled Dream Role Play-ს</p>
+
+<div class="buttons">
+
+<a
+class="button"
+href="samp://94.23.168.153:2150">
+🎮 თამაშის დაწყება
+</a>
+
+<a
+class="button dark"
+href="#launcher">
+📥 Launcher
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="server">
+
+<div class="container">
+
+<h2 class="title">სერვერის სტატუსი</h2>
+
+<div class="status">
+
+<div class="box">
+
+<h3>სტატუსი</h3>
+
+<div class="online">
+● ONLINE
+</div>
+
+</div>
+
+
+<div class="box">
+
+<h3>მოთამაშეები</h3>
+
+<div class="number">
+2 / 50
+</div>
+
+</div>
+
+
+<div class="box">
+
+<h3>Game Mode</h3>
+
+<div class="number">
+FD:RP
+</div>
+
+</div>
+
+
+<div class="box">
+
+<h3>Server IP</h3>
+
+<div class="number">
+94.23.168.153:2150
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="shop" id="shop">
+
+<div class="container">
+
+<h2 class="title">
+🛒 DONATE SHOP
+</h2>
+
+<div class="shop-grid">
+
+
+<div class="product">
+
+<div class="coin">💎</div>
+
+<h3>100 G-COIN</h3>
+
+<div class="price">€1</div>
+
+<ul>
+
+<li>100 G-Coin</li>
+
+<li>სწრაფი ჩარიცხვა</li>
+
+</ul>
+
+<button
+class="button"
+onclick="donate('100 G-Coin','€1')">
+ყიდვა
+</button>
+
+</div>
+
+
+<div class="product">
+
+<div class="coin">💎</div>
+
+<h3>500 G-COIN</h3>
+
+<div class="price">€5</div>
+
+<ul>
+
+<li>500 G-Coin</li>
+
+<li>ბონუსი</li>
+
+<li>სწრაფი ჩარიცხვა</li>
+
+</ul>
+
+<button
+class="button"
+onclick="donate('500 G-Coin','€5')">
+ყიდვა
+</button>
+
+</div>
+
+
+<div class="product">
+
+<div class="coin">💎</div>
+
+<h3>1000 G-COIN</h3>
+
+<div class="price">€10</div>
+
+<ul>
+
+<li>1000 G-Coin</li>
+
+<li>ბონუსი</li>
+
+<li>VIP მხარდაჭერა</li>
+
+</ul>
+
+<button
+class="button"
+onclick="donate('1000 G-Coin','€10')">
+ყიდვა
+</button>
+
+</div>
+
+
+<div class="product">
+
+<div class="coin">💎</div>
+
+<h3>2500 G-COIN</h3>
+
+<div class="price">€20</div>
+
+<ul>
+
+<li>2500 G-Coin</li>
+
+<li>დიდი ბონუსი</li>
+
+<li>პრიორიტეტული მხარდაჭერა</li>
+
+</ul>
+
+<button
+class="button"
+onclick="donate('2500 G-Coin','€20')">
+ყიდვა
+</button>
+
+</div>
+
+
+<div class="product vip">
+
+<div class="coin">👑</div>
+
+<h3>VIP</h3>
+
+<div class="price">€15</div>
+
+<ul>
+
+<li>VIP სტატუსი</li>
+
+<li>სპეციალური შესაძლებლობები</li>
+
+<li>პრიორიტეტული მხარდაჭერა</li>
+
+</ul>
+
+<button
+class="button"
+onclick="donate('VIP','€15')">
+ყიდვა
+</button>
+
+</div>
+
+
+<div class="product">
+
+<div class="coin">👑</div>
+
+<h3>PREMIUM</h3>
+
+<div class="price">€30</div>
+
+<ul>
+
+<li>Premium სტატუსი</li>
+
+<li>2500 G-Coin</li>
+
+<li>სპეციალური ბონუსები</li>
+
+</ul>
+
+<button
+class="button"
+onclick="donate('Premium','€30')">
+ყიდვა
+</button>
+
+</div>
+
+
+</div>
+
+<p class="notice">
+გადახდის სისტემა ჯერ არ არის მიერთებული.
+ღილაკები ამ ეტაპზე მხოლოდ დემო რეჟიმში მუშაობს.
+</p>
+
+</div>
+
+</section>
+
+
+<section id="about">
+
+<div class="container">
+
+<h2 class="title">
+რატომ FD:RP?
+</h2>
+
+<div class="cards">
+
+
+<div class="card">
+
+<div class="icon">🏙️</div>
+
+<h3>ცოცხალი ქალაქი</h3>
+
+<p>
+შექმენი შენი პერსონაჟი, იმუშავე,
+შეიძინე მანქანა და ააშენე საკუთარი ისტორია.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">⚔️</div>
+
+<h3>ფრაქციები</h3>
+
+<p>
+შეუერთდი სხვადასხვა ორგანიზაციას
+და გახდი ქალაქის მნიშვნელოვანი ნაწილი.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">👥</div>
+
+<h3>ქართული Community</h3>
+
+<p>
+ითამაშე ქართველ მოთამაშეებთან
+და გაიცანი ახალი ადამიანები.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="social" id="community">
+
+<div class="container">
+
+<h2 class="title">
+შემოგვიერთდი
+</h2>
+
+<div class="cards">
+
+
+<div class="card">
+
+<div class="icon">💬</div>
+
+<h3>Discord</h3>
+
+<p>
+შემოგვიერთდი ჩვენს ოფიციალურ Discord-ში.
+</p>
+
+<a
+class="button"
+href="https://discord.gg/eYUV46ysT"
+target="_blank">
+Discord-ზე შესვლა
+</a>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">▶️</div>
+
+<h3>YouTube</h3>
+
+<p>
+ნახე ჩვენი ვიდეოები და ახალი კონტენტი.
+</p>
+
+<a
+class="button"
+href="https://www.youtube.com/@FulfilledDreamRolePlay"
+target="_blank">
+YouTube არხი
+</a>
+
+</div>
+
+
+<div class="card" id="launcher">
+
+<div class="icon">📥</div>
+
+<h3>Launcher</h3>
+
+<p>
+Launcher-ის ლინკს მოგვიანებით მივაბამთ.
+</p>
+
+<a class="button dark" href="#">
+მალე იქნება
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="admin" id="admin">
+
+<div class="container">
+
+<h2 class="title">
+🔐 ADMIN FINANCE
+</h2>
+
+
+<div id="loginBox" class="login-box">
+
+<h3>ადმინისტრატორის შესვლა</h3>
+
+<p style="color:#888">
+Finance Dashboard-ის სანახავად შეიყვანე პაროლი.
+</p>
+
+<input
+id="adminPassword"
+class="input"
+type="password"
+placeholder="Admin Password">
+
+<button
+class="button"
+onclick="loginAdmin()">
+შესვლა
+</button>
+
+<p
+id="loginMessage"
+style="color:#e85b5b">
+</p>
+
+</div>
+
+
+<div id="dashboard" style="display:none">
+
+
+<div class="finance-grid">
+
+
+<div class="finance-card">
+
+<h3>საერთო შემოსავალი</h3>
+
+<div
+class="finance-number"
+id="totalRevenue">
+€0
+</div>
+
+</div>
+
+
+<div class="finance-card">
+
+<h3>დღეს</h3>
+
+<div
+class="finance-number"
+id="todayRevenue">
+€0
+</div>
+
+</div>
+
+
+<div class="finance-card">
+
+<h3>ამ თვეში</h3>
+
+<div
+class="finance-number"
+id="monthRevenue">
+€0
+</div>
+
+</div>
+
+
+<div class="finance-card">
+
+<h3>ტრანზაქციები</h3>
+
+<div
+class="finance-number"
+id="transactionCount">
+0
+</div>
+
+</div>
+
+
+</div>
+
+
+<h3 style="color:#d4af37">
+ტრანზაქციების ისტორია
+</h3>
+
+
+<div class="table-wrap">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>თარიღი</th>
+
+<th>მომხმარებელი</th>
+
+<th>პროდუქტი</th>
+
+<th>თანხა</th>
+
+<th>სტატუსი</th>
+
+</tr>
+
+</thead>
+
+<tbody id="transactions">
+
+</tbody>
+
+</table>
+
+</div>
+
+
+<p class="notice">
+ეს Dashboard ამ ეტაპზე დემოა.
+რეალური გადახდების ავტომატური ჩაწერისთვის
+საჭიროა Backend + Database + Payment Webhook.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>
+© 2026 Fulfilled Dream Role Play
+</p>
+
+<p>
+FD:RP • Georgia
+</p>
+
+</footer>
+
+
+<script>
+
+const ADMIN_PASSWORD = "FD2026";
+
+let transactions = JSON.parse(
+localStorage.getItem("fd_transactions") || "[]"
+);
+
+
+function donate(product,price){
+
+alert(
+"არჩეულია: " +
+product +
+"\nფასი: " +
+price +
+"\n\nგადახდის სისტემა ჯერ არ არის მიერთებული."
+);
+
+}
+
+
+function loginAdmin(){
+
+const password =
+document.getElementById("adminPassword").value;
+
+const message =
+document.getElementById("loginMessage");
+
+if(password === ADMIN_PASSWORD){
+
+document.getElementById("loginBox").style.display="none";
+
+document.getElementById("dashboard").style.display="block";
+
+loadDashboard();
+
+}else{
+
+message.textContent =
+"არასწორი ადმინისტრატორის პაროლი.";
+
+}
+
+}
+
+
+function loadDashboard(){
+
+let total = 0;
+
+let today = 0;
+
+let month = 0;
+
+const now = new Date();
+
+const todayString =
+now.toISOString().slice(0,10);
+
+const monthString =
+now.toISOString().slice(0,7);
+
+
+transactions.forEach(t => {
+
+const amount =
+parseFloat(
+String(t.amount)
+.replace("€","")
+);
+
+total += amount;
+
+if(t.date.startsWith(todayString)){
+today += amount;
+}
+
+if(t.date.startsWith(monthString)){
+month += amount;
+}
+
+});
+
+
+document.getElementById("totalRevenue")
+.textContent =
+"€" + total.toFixed(2);
+
+document.getElementById("todayRevenue")
+.textContent =
+"€" + today.toFixed(2);
+
+document.getElementById("monthRevenue")
+.textContent =
+"€" + month.toFixed(2);
+
+document.getElementById("transactionCount")
+.textContent =
+transactions.length;
+
+
+const tbody =
+document.getElementById("transactions");
+
+tbody.innerHTML="";
+
+
+transactions.slice().reverse().forEach(t => {
+
+const row =
+document.createElement("tr");
+
+row.innerHTML = `
+
+<td>${t.date}</td>
+
+<td>${t.user}</td>
+
+<td>${t.product}</td>
+
+<td>€${t.amount}</td>
+
+<td class="success">
+${t.status}
+</td>
+
+`;
+
+tbody.appendChild(row);
+
+});
+
+}
+
+</script>
+
+</body>
+  </html>
